@@ -11,15 +11,15 @@ The script is using client/server export depending on the user choise and browse
 
 Properties
 ---------------------
-useCanvas - boolean property which is indicating whether a client side convertion to be used.
-canvgSrc  - string property which is representing the path to the canvg.js file.
-rgbSrc    - string property which is representing the path to the rgbColor.js file.
+*  useCanvas - boolean property which is indicating whether a client side convertion to be used.
+*  canvgSrc  - string property which is representing the path to the canvg.js file.
+*  rgbSrc    - string property which is representing the path to the rgbColor.js file.
 
 Methods
 ---------------------
-exportToPng - exports the chart to PNG file. Accepts a single parameter - the chart that should be exported.
-exportToJpg - exports the chart to JPG file. Accepts a single parameter - the chart that should be exported.
-exportToGif - exports the chart to GIF file. Accepts a single parameter - the chart that should be exported.
+*  exportToPng - exports the chart to PNG file. Accepts a single parameter - the chart that should be exported.
+*  exportToJpg - exports the chart to JPG file. Accepts a single parameter - the chart that should be exported.
+*  exportToGif - exports the chart to GIF file. Accepts a single parameter - the chart that should be exported.
 
 Sample usage:
 ---------------------
