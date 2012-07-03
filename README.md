@@ -28,7 +28,7 @@ Sample usage:
 $.jqx.jqxchartExporter({
   canvgSource: '../../scripts/canvg.js',
   rgbSource: '../../scripts/rgbcolor.js',
-  useCanvas: false,
+  useCanvas: true
 });
 
 $.jqx.jqxchartExporter.exportToPng('#jqxChart');
