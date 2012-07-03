@@ -1,4 +1,4 @@
-jqxChart image export
+jqxChart/jqxGauge export to image
 =====================
 
 Overview
