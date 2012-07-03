@@ -1,4 +1,4 @@
-jqxchart-image-export
+jqxChart image export
 =====================
 
 Export to image (png/jpg/gif) of jqxChart.
