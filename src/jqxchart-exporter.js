@@ -347,8 +347,6 @@ $.jqx.jqxchartExporter = (function ($) {
         /**
         * Exports the jqxChart to png format.
         * @param {string} chart selector of the jqxChart container.
-        * @param {boolean} canvasEnabled indicates whether a client side conversion is enabled.
-        * If you set this flag to true then you should provide the canvg library.
         */
         exportToPng: function (chart) {
             exportToImage(chart, 'image/png');
@@ -357,8 +355,6 @@ $.jqx.jqxchartExporter = (function ($) {
         /**
         * Exports the jqxChart to jpg format.
         * @param {string} chart selector of the jqxChart container.
-        * @param {boolean} canvasEnabled indicates whether a client side conversion is enabled.
-        * If you set this flag to true then you should provide the canvg library.
         */
         exportToJpg: function (chart) {
             exportToImage(chart, 'image/jpg');
@@ -367,8 +363,6 @@ $.jqx.jqxchartExporter = (function ($) {
         /**
         * Exports the jqxChart to gif format.
         * @param {string} chart selector of the jqxChart container.
-        * @param {boolean} canvasEnabled indicates whether a client side conversion is enabled.
-        * If you set this flag to true then you should provide the canvg library.
         */
         exportToGif: function (chart) {
             exportToImage(chart, 'image/gif');
