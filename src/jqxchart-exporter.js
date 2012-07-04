@@ -1,4 +1,4 @@
-/** @namespace */
+﻿/** @namespace */
 $.jqx.jqxchartExporter = (function ($) {
 
     'use strict';
@@ -234,6 +234,38 @@ $.jqx.jqxchartExporter = (function ($) {
         });
         return markup.replace(/([a-zA-Z]{2,5}=)([a-zA-Z0-9_\-]{1,})/g, '$1"$2"');
     }
+    
+    /** @private */
+    function calculateSize(property, value, size) {
+        var map = {
+            'x1': 'width',
+            'x2': 'width',
+            'y1': 'height',
+            'y2': 'height',
+            'offset': 'height',
+            'top': 'height',
+            'left': 'width',
+            'bottom': 'height',
+            'right': 'width',            
+            'height': 'height',
+            'width': 'width'
+        };
+        value = parseInt(value, 10);
+        return (value / 100) * size[map[property]];
+    }
+    
+    /** @private */
+    function fixMarkup(markup, size) {
+        var fixed = markup.replace(/([\w]{1,})=["']([\d]{1,})%['"]/g, function(str, prop, value) {
+            if (prop !== 'offset') {
+                return prop + '="' + calculateSize(prop, value, size) + 'px"';
+            } else {
+                return str;
+            }
+        });
+        fixed = fixed.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ');
+        return fixed;
+    }
 
     /** @private */
     function getSvgMarkup(container) {
@@ -244,6 +276,7 @@ $.jqx.jqxchartExporter = (function ($) {
         } else {
             markup = getTranslatedMarkup(container);
         }
+        markup = fixMarkup(markup, { width: container.width(), height: container.height() });
         return markup;
     }
 
